@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>MiVida</title>
+<meta name="description" content="Agenda, notas, dinero y estudio en un solo lugar.">
+<meta name="theme-color" content="#f5f6f8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0f1115" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="MiVida">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<div id="lock" class="lock" hidden></div>
+<div id="app" class="app" hidden>
+  <nav id="nav" class="nav" aria-label="Secciones"></nav>
+  <main id="view" class="view" tabindex="-1"></main>
+</div>
+<div id="sheet" class="sheet-wrap" hidden></div>
+<div id="toasts" class="toasts" aria-live="polite"></div>
+<div id="tip" class="tip" role="tooltip" hidden></div>
+<noscript>MiVida necesita JavaScript para funcionar.</noscript>
+<script src="config.js"></script>
+<script type="module" src="js/app.js"></script>
+</body>
+</html>
