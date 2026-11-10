@@ -1,6 +1,6 @@
 // Deja la app disponible sin conexión. Sirve primero la copia guardada y la
 // renueva en segundo plano: una versión nueva se ve al abrir la app otra vez.
-const CACHE = 'mivida-v2';
+const CACHE = 'mivida-v3';
 const SHELL = ['./', 'index.html', 'config.js', 'manifest.webmanifest', 'css/app.css',
   'js/app.js', 'js/store.js', 'js/parser.js', 'js/lock.js', 'js/google.js', 'js/notify.js', 'js/timer.js', 'js/demo.js',
   'fonts/geist.woff2', 'fonts/geist-mono.woff2', 'icons/icon-192.png', 'icons/icon-512.png', 'icons/apple-touch-icon.png'];

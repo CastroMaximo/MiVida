@@ -456,7 +456,7 @@ function viewAjustes() {
   let google;
   if (DEMO) google = set('Google Calendar y sincronización', 'Disponible en la app publicada, no en esta vista previa.', '');
   else if (!G.clientId()) google = `<div class="set-row" style="flex-direction:column;align-items:stretch;gap:10px">
-      <div class="row-main"><span class="row-title">Conectar Google (una sola vez)</span><span class="row-sub">Sincroniza la PC y el iPhone y envía tus fechas a Google Calendar.</span></div>
+      <div class="row-main" style="flex:none"><span class="row-title">Conectar Google (una sola vez)</span><span class="row-sub">Sincroniza la PC y el iPhone y envía tus fechas a Google Calendar.</span></div>
       <ol class="steps"><li>En Google Cloud Console crea un proyecto y activa <b>Google Calendar API</b> y <b>Google Drive API</b>.</li>
         <li>Configura la pantalla de consentimiento como <b>Externa</b>, en modo de prueba, y agrégate como usuario de prueba.</li>
         <li>Crea una credencial <b>ID de cliente de OAuth → Aplicación web</b> con esta dirección como origen y como URI de redireccionamiento:</li></ol>
@@ -475,7 +475,7 @@ function viewAjustes() {
     <div class="grid-2"><div class="stack">
     ${section('Seguridad', `<div class="list">
       ${set('PIN', DEMO ? 'Desactivado en la vista previa.' : 'Se pide al abrir la app en este dispositivo.', DEMO ? '' : `<button class="btn sm ghost" data-a="change-pin">Cambiar</button>`)}
-      ${DEMO ? '' : set(esc(lock.bioName()), bioOk ? 'Entra sin escribir el PIN.' : 'Este dispositivo o navegador no ofrece biometría.', bioOk ? `<button class="btn sm ${lock.bioEnabled() ? 'ghost' : ''}" data-a="bio-toggle">${lock.bioEnabled() ? 'Desactivar' : 'Activar'}</button>` : '')}
+      ${DEMO ? '' : set(esc(cap1(lock.bioName())), bioOk ? 'Entra sin escribir el PIN.' : 'Este dispositivo o navegador no ofrece biometría.', bioOk ? `<button class="btn sm ${lock.bioEnabled() ? 'ghost' : ''}" data-a="bio-toggle">${lock.bioEnabled() ? 'Desactivar' : 'Activar'}</button>` : '')}
       ${set('Bloqueo automático', 'Al volver después de este tiempo fuera.', `<select class="input" data-change="autolock" aria-label="Bloqueo automático">${options([['0', 'Al salir'], ['1', '1 minuto'], ['5', '5 minutos'], ['15', '15 minutos']], String(device.autolock ?? 1))}</select>`)}</div>`)}
     ${section('Google', `<div class="list">${google}</div>`)}
     ${section('Avisos', `<div class="list">${set('Notificaciones de la app',
